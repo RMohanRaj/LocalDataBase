@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eHa-Dt-SOv">
+                                <rect key="frame" x="10" y="38" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.1142149344" green="0.62782806160000004" blue="0.94559913870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="q8i-G9-6c2"/>
+                                    <constraint firstAttribute="width" constant="50" id="xEl-Cl-UHV"/>
+                                </constraints>
+                                <state key="normal" title="insert">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="insertData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q4x-5b-dxK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KzF-fA-PA1">
+                                <rect key="frame" x="315" y="38" width="50" height="30"/>
+                                <color key="backgroundColor" red="0.1142149344" green="0.62782806160000004" blue="0.94559913870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="9er-mf-2fn"/>
+                                </constraints>
+                                <state key="normal" title="delete">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uba-3n-S0U"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5d6-M2-9Wy">
+                                <rect key="frame" x="0.0" y="94" width="375" height="573"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ije-Ur-2OS"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zUa-o8-gfQ"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORE DATA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yp2-pq-H8f">
+                                <rect key="frame" x="108" y="38" width="160" height="30"/>
+                                <color key="backgroundColor" red="0.1142149344" green="0.62782806160000004" blue="0.94559913870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fi3-Qm-O8j"/>
+                                    <constraint firstAttribute="width" constant="160" id="lwx-VV-DQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eHa-Dt-SOv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-6" id="7m4-ez-5tc"/>
+                            <constraint firstItem="KzF-fA-PA1" firstAttribute="leading" secondItem="yp2-pq-H8f" secondAttribute="trailing" constant="47" id="GMb-mG-upE"/>
+                            <constraint firstItem="5d6-M2-9Wy" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="QGs-9q-5cq"/>
+                            <constraint firstItem="yp2-pq-H8f" firstAttribute="leading" secondItem="eHa-Dt-SOv" secondAttribute="trailing" constant="48" id="Qu1-Vh-nsq"/>
+                            <constraint firstAttribute="trailing" secondItem="5d6-M2-9Wy" secondAttribute="trailing" id="Rlq-wC-wWf"/>
+                            <constraint firstItem="5d6-M2-9Wy" firstAttribute="top" secondItem="KzF-fA-PA1" secondAttribute="bottom" constant="26" id="Ufh-Ty-Y6p"/>
+                            <constraint firstItem="eHa-Dt-SOv" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="18" id="XfH-Mw-Ihw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KzF-fA-PA1" secondAttribute="trailing" constant="-6" id="Z5E-VF-mDv"/>
+                            <constraint firstItem="5d6-M2-9Wy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="d46-PU-Qxp"/>
+                            <constraint firstItem="yp2-pq-H8f" firstAttribute="top" secondItem="eHa-Dt-SOv" secondAttribute="top" id="sUK-zW-76T"/>
+                            <constraint firstItem="5d6-M2-9Wy" firstAttribute="top" secondItem="eHa-Dt-SOv" secondAttribute="bottom" constant="26" id="vEM-r4-HcU"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mTableView" destination="5d6-M2-9Wy" id="XiC-1K-JVJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="123.68815592203899"/>
+        </scene>
+    </scenes>
+</document>
