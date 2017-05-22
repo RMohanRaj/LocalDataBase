@@ -4,7 +4,7 @@ CoreData-> insert,update and delete,
 Add Two buttons and Tableview in mainstoryboard,
 Create IBAction for the buttons one is for insert and another is for delete,
 
-![alt text](https://github.com/RMohanRaj/LocalDataBase/edit/master/core.jpeg)
+![alt text](https://github.com/RMohanRaj/LocalDataBase/blob/master/Core.jpeg)
 
 Create the NsmutableArray to store and display values in tableview.
 ```
