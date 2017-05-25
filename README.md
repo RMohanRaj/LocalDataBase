@@ -90,4 +90,8 @@ once You added the data needs to fetch it to display in Tableview,for fetch data
     [_mTableView reloadData];
 }
 ```
+###License
+
+This project is licensed under the MIT License - see the LICENSE file for details
+
 For Further codes Refer the viewController.m file.
